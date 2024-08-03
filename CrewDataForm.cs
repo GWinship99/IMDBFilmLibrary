@@ -1,8 +1,8 @@
 namespace IMDBFilmLibrary
 {
-    public partial class FilmListForm : Form
+    public partial class CrewDataForm : Form
     {
-        public FilmListForm()
+        public CrewDataForm()
         {
             InitializeComponent();
         }

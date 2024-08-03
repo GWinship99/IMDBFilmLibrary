@@ -1,6 +1,6 @@
 ﻿namespace IMDBFilmLibrary
 {
-    partial class FilmListForm
+    partial class CrewDataForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -59,7 +59,7 @@
             filmList.Name = "filmList";
             filmList.Size = new Size(907, 39);
             filmList.TabIndex = 2;
-            filmList.Text = "Films go here...";
+            filmList.Text = "Retrieved crew data goes here...";
             // 
             // textBox2
             // 
@@ -78,7 +78,7 @@
             searchBtn.Text = "Search";
             searchBtn.UseVisualStyleBackColor = true;
             // 
-            // FilmListForm
+            // CrewDataForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -88,8 +88,8 @@
             Controls.Add(filmList);
             Controls.Add(storeDataBtn);
             Controls.Add(retrieveDataBtn);
-            Name = "FilmListForm";
-            Text = "Film Data";
+            Name = "CrewDataForm";
+            Text = "Crew Data";
             ResumeLayout(false);
             PerformLayout();
         }

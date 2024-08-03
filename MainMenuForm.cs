@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace IMDBFilmLibrary
 {
-    public partial class MainNenuForm : Form
+    public partial class MainMenuForm : Form
     {
-        public MainNenuForm()
+        public MainMenuForm()
         {
             InitializeComponent();
+        }
+
+        private void crewDataBtn_Click(object sender, EventArgs e)
+        {
+            CrewDataForm crewDataForm = new CrewDataForm();
+            crewDataForm.Show();
         }
     }
 }
