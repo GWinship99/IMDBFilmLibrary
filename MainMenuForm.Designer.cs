@@ -42,7 +42,7 @@ namespace IMDBFilmLibrary
             crewDataBtn.TabIndex = 0;
             crewDataBtn.Text = "Crew Data";
             crewDataBtn.UseVisualStyleBackColor = true;
-            crewDataBtn.Click += this.crewDataBtn_Click;
+            crewDataBtn.Click += crewDataBtn_Click;
             // 
             // episodeDataBtn
             // 
@@ -52,6 +52,7 @@ namespace IMDBFilmLibrary
             episodeDataBtn.TabIndex = 1;
             episodeDataBtn.Text = "Episode Data";
             episodeDataBtn.UseVisualStyleBackColor = true;
+            episodeDataBtn.Click += episodeDataBtn_Click;
             // 
             // ratingsDataBtn
             // 
@@ -61,6 +62,7 @@ namespace IMDBFilmLibrary
             ratingsDataBtn.TabIndex = 2;
             ratingsDataBtn.Text = "Ratings Data";
             ratingsDataBtn.UseVisualStyleBackColor = true;
+            ratingsDataBtn.Click += ratingsDataBtn_Click;
             // 
             // MainMenuForm
             // 
@@ -75,7 +77,7 @@ namespace IMDBFilmLibrary
             ResumeLayout(false);
         }
 
-        
+
 
         #endregion
 

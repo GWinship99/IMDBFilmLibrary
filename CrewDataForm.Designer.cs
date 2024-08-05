@@ -28,66 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            retrieveDataBtn = new Button();
-            storeDataBtn = new Button();
-            filmList = new TextBox();
-            textBox2 = new TextBox();
-            searchBtn = new Button();
+            retrieveCrewDataBtn = new Button();
+            storeCrewDataBtn = new Button();
+            crewDataList = new TextBox();
+            searchBox = new TextBox();
+            searchCrewBtn = new Button();
             SuspendLayout();
             // 
-            // retrieveDataBtn
+            // retrieveCrewDataBtn
             // 
-            retrieveDataBtn.Location = new Point(1043, 117);
-            retrieveDataBtn.Name = "retrieveDataBtn";
-            retrieveDataBtn.Size = new Size(256, 46);
-            retrieveDataBtn.TabIndex = 0;
-            retrieveDataBtn.Text = "Retrieve Data";
-            retrieveDataBtn.UseVisualStyleBackColor = true;
+            retrieveCrewDataBtn.Location = new Point(1043, 117);
+            retrieveCrewDataBtn.Name = "retrieveCrewDataBtn";
+            retrieveCrewDataBtn.Size = new Size(256, 46);
+            retrieveCrewDataBtn.TabIndex = 0;
+            retrieveCrewDataBtn.Text = "Retrieve Data";
+            retrieveCrewDataBtn.UseVisualStyleBackColor = true;
+            retrieveCrewDataBtn.Click += retrieveCrewDataBtn_Click;
             // 
-            // storeDataBtn
+            // storeCrewDataBtn
             // 
-            storeDataBtn.Location = new Point(1043, 47);
-            storeDataBtn.Name = "storeDataBtn";
-            storeDataBtn.Size = new Size(262, 46);
-            storeDataBtn.TabIndex = 1;
-            storeDataBtn.Text = "Store Data";
-            storeDataBtn.UseVisualStyleBackColor = true;
+            storeCrewDataBtn.Location = new Point(1043, 47);
+            storeCrewDataBtn.Name = "storeCrewDataBtn";
+            storeCrewDataBtn.Size = new Size(262, 46);
+            storeCrewDataBtn.TabIndex = 1;
+            storeCrewDataBtn.Text = "Store Data";
+            storeCrewDataBtn.UseVisualStyleBackColor = true;
             // 
-            // filmList
+            // crewDataList
             // 
-            filmList.Location = new Point(31, 49);
-            filmList.Name = "filmList";
-            filmList.Size = new Size(907, 39);
-            filmList.TabIndex = 2;
-            filmList.Text = "Retrieved crew data goes here...";
+            crewDataList.Location = new Point(31, 49);
+            crewDataList.Name = "crewDataList";
+            crewDataList.Size = new Size(907, 39);
+            crewDataList.TabIndex = 2;
+            crewDataList.Text = "Retrieved crew data goes here...";
             // 
-            // textBox2
+            // searchBox
             // 
-            textBox2.Location = new Point(950, 178);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(355, 39);
-            textBox2.TabIndex = 3;
-            textBox2.Text = "Search for data here!";
+            searchBox.Location = new Point(950, 178);
+            searchBox.Name = "searchBox";
+            searchBox.Size = new Size(355, 39);
+            searchBox.TabIndex = 3;
+            searchBox.Text = "Search for data here!";
             // 
-            // searchBtn
+            // searchCrewBtn
             // 
-            searchBtn.Location = new Point(950, 232);
-            searchBtn.Name = "searchBtn";
-            searchBtn.Size = new Size(355, 46);
-            searchBtn.TabIndex = 4;
-            searchBtn.Text = "Search";
-            searchBtn.UseVisualStyleBackColor = true;
+            searchCrewBtn.Location = new Point(950, 232);
+            searchCrewBtn.Name = "searchCrewBtn";
+            searchCrewBtn.Size = new Size(355, 46);
+            searchCrewBtn.TabIndex = 4;
+            searchCrewBtn.Text = "Search";
+            searchCrewBtn.UseVisualStyleBackColor = true;
             // 
             // CrewDataForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1333, 963);
-            Controls.Add(searchBtn);
-            Controls.Add(textBox2);
-            Controls.Add(filmList);
-            Controls.Add(storeDataBtn);
-            Controls.Add(retrieveDataBtn);
+            Controls.Add(searchCrewBtn);
+            Controls.Add(searchBox);
+            Controls.Add(crewDataList);
+            Controls.Add(storeCrewDataBtn);
+            Controls.Add(retrieveCrewDataBtn);
             Name = "CrewDataForm";
             Text = "Crew Data";
             ResumeLayout(false);
@@ -96,10 +97,10 @@
 
         #endregion
 
-        private Button retrieveDataBtn;
-        private Button storeDataBtn;
-        private TextBox filmList;
-        private TextBox textBox2;
-        private Button searchBtn;
+        private Button retrieveCrewDataBtn;
+        private Button storeCrewDataBtn;
+        private TextBox crewDataList;
+        private TextBox searchBox;
+        private Button searchCrewBtn;
     }
 }

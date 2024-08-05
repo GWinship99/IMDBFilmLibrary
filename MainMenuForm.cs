@@ -22,5 +22,17 @@ namespace IMDBFilmLibrary
             CrewDataForm crewDataForm = new CrewDataForm();
             crewDataForm.Show();
         }
+
+        private void ratingsDataBtn_Click(object sender, EventArgs e)
+        {
+            RatingsDataForm ratingsDataForm = new RatingsDataForm();
+            ratingsDataForm.Show();
+        }
+
+        private void episodeDataBtn_Click(object sender, EventArgs e)
+        {
+            EpisodeDataForm episodeDataForm = new EpisodeDataForm();
+            episodeDataForm.Show();
+        }
     }
 }
