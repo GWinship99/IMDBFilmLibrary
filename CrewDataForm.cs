@@ -15,12 +15,14 @@ namespace IMDBFilmLibrary
             using (SqlConnection connection = new SqlConnection(connectionString))
             { 
                 connection.Open();
-                string query = "Select * FROM dbo.Crew ORDER BY tconst";
+                string query = "Select TOP 10 * FROM dbo.Crew ORDER BY tconst";
            
                 using(SqlCommand command = new SqlCommand(query, connection))
                 {
+                    crewListBox.Items.Clear();
                     using(SqlDataReader reader = command.ExecuteReader())
                     {
+                        List<string> crewList = new List<string>();
                         string data = string.Empty;
                         while (reader.Read())
                         {
@@ -29,7 +31,11 @@ namespace IMDBFilmLibrary
                             string writers = reader["writers"].ToString();
                             data = $"TConst = {tconst}, Director = {directors}, Writers = {writers}";
                         }
-                        crewDataList.Text = data;
+                        crewList.Add(data);
+                        foreach (string crew in crewList)
+                        {
+                            this.crewListBox.Items.Add(crew);
+                        }
                     }
                     connection.Close();
                 }

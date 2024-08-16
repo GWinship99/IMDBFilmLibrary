@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ratingsDataList = new TextBox();
             storeEpisodesDataBtn = new Button();
             retrieveEpisodesDataBtn = new Button();
             searchBox3 = new TextBox();
             searchRatingsBtn = new Button();
+            episodeListBox = new ListBox();
             SuspendLayout();
-            // 
-            // ratingsDataList
-            // 
-            ratingsDataList.Location = new Point(12, 25);
-            ratingsDataList.Name = "ratingsDataList";
-            ratingsDataList.Size = new Size(778, 39);
-            ratingsDataList.TabIndex = 4;
-            ratingsDataList.Text = "Retrieved episodes data goes here...";
             // 
             // storeEpisodesDataBtn
             // 
@@ -60,6 +52,7 @@
             retrieveEpisodesDataBtn.TabIndex = 6;
             retrieveEpisodesDataBtn.Text = "Retrieve Data";
             retrieveEpisodesDataBtn.UseVisualStyleBackColor = true;
+            retrieveEpisodesDataBtn.Click += retrieveEpisodesDataBtn_Click;
             // 
             // searchBox3
             // 
@@ -78,16 +71,24 @@
             searchRatingsBtn.Text = "Search";
             searchRatingsBtn.UseVisualStyleBackColor = true;
             // 
+            // episodeListBox
+            // 
+            episodeListBox.FormattingEnabled = true;
+            episodeListBox.Location = new Point(50, 32);
+            episodeListBox.Name = "episodeListBox";
+            episodeListBox.Size = new Size(624, 644);
+            episodeListBox.TabIndex = 9;
+            // 
             // EpisodeDataForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1122, 732);
+            Controls.Add(episodeListBox);
             Controls.Add(searchRatingsBtn);
             Controls.Add(searchBox3);
             Controls.Add(retrieveEpisodesDataBtn);
             Controls.Add(storeEpisodesDataBtn);
-            Controls.Add(ratingsDataList);
             Name = "EpisodeDataForm";
             Text = "EpisodeDataForm";
             ResumeLayout(false);
@@ -95,11 +96,10 @@
         }
 
         #endregion
-
-        private TextBox ratingsDataList;
         private Button storeEpisodesDataBtn;
         private Button retrieveEpisodesDataBtn;
         private TextBox searchBox3;
         private Button searchRatingsBtn;
+        private ListBox episodeListBox;
     }
 }

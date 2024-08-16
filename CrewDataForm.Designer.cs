@@ -30,9 +30,9 @@
         {
             retrieveCrewDataBtn = new Button();
             storeCrewDataBtn = new Button();
-            crewDataList = new TextBox();
             searchBox = new TextBox();
             searchCrewBtn = new Button();
+            crewListBox = new ListBox();
             SuspendLayout();
             // 
             // retrieveCrewDataBtn
@@ -54,14 +54,6 @@
             storeCrewDataBtn.Text = "Store Data";
             storeCrewDataBtn.UseVisualStyleBackColor = true;
             // 
-            // crewDataList
-            // 
-            crewDataList.Location = new Point(31, 49);
-            crewDataList.Name = "crewDataList";
-            crewDataList.Size = new Size(907, 39);
-            crewDataList.TabIndex = 2;
-            crewDataList.Text = "Retrieved crew data goes here...";
-            // 
             // searchBox
             // 
             searchBox.Location = new Point(950, 178);
@@ -79,14 +71,22 @@
             searchCrewBtn.Text = "Search";
             searchCrewBtn.UseVisualStyleBackColor = true;
             // 
+            // crewListBox
+            // 
+            crewListBox.FormattingEnabled = true;
+            crewListBox.Location = new Point(12, 32);
+            crewListBox.Name = "crewListBox";
+            crewListBox.Size = new Size(905, 868);
+            crewListBox.TabIndex = 5;
+            // 
             // CrewDataForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1333, 963);
+            Controls.Add(crewListBox);
             Controls.Add(searchCrewBtn);
             Controls.Add(searchBox);
-            Controls.Add(crewDataList);
             Controls.Add(storeCrewDataBtn);
             Controls.Add(retrieveCrewDataBtn);
             Name = "CrewDataForm";
@@ -99,8 +99,8 @@
 
         private Button retrieveCrewDataBtn;
         private Button storeCrewDataBtn;
-        private TextBox crewDataList;
         private TextBox searchBox;
         private Button searchCrewBtn;
+        private ListBox crewListBox;
     }
 }

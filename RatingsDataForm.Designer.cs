@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ratingsDataList = new TextBox();
             storeRatingsDataBtn = new Button();
             retrieveRatingsDataBtn = new Button();
             searchBox2 = new TextBox();
             searchRatingsBtn = new Button();
+            ratingsListBox = new ListBox();
             SuspendLayout();
-            // 
-            // ratingsDataList
-            // 
-            ratingsDataList.Location = new Point(12, 25);
-            ratingsDataList.Name = "ratingsDataList";
-            ratingsDataList.Size = new Size(907, 39);
-            ratingsDataList.TabIndex = 3;
-            ratingsDataList.Text = "Retrieved ratings data goes here...";
             // 
             // storeRatingsDataBtn
             // 
@@ -60,6 +52,7 @@
             retrieveRatingsDataBtn.TabIndex = 5;
             retrieveRatingsDataBtn.Text = "Retrieve Data";
             retrieveRatingsDataBtn.UseVisualStyleBackColor = true;
+            retrieveRatingsDataBtn.Click += retrieveRatingsDataBtn_Click;
             // 
             // searchBox2
             // 
@@ -78,16 +71,24 @@
             searchRatingsBtn.Text = "Search";
             searchRatingsBtn.UseVisualStyleBackColor = true;
             // 
+            // ratingsListBox
+            // 
+            ratingsListBox.FormattingEnabled = true;
+            ratingsListBox.Location = new Point(29, 25);
+            ratingsListBox.Name = "ratingsListBox";
+            ratingsListBox.Size = new Size(771, 676);
+            ratingsListBox.TabIndex = 8;
+            // 
             // RatingsDataForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1246, 752);
+            Controls.Add(ratingsListBox);
             Controls.Add(searchRatingsBtn);
             Controls.Add(searchBox2);
             Controls.Add(retrieveRatingsDataBtn);
             Controls.Add(storeRatingsDataBtn);
-            Controls.Add(ratingsDataList);
             Name = "RatingsDataForm";
             Text = "RatingsDataForm";
             ResumeLayout(false);
@@ -95,11 +96,10 @@
         }
 
         #endregion
-
-        private TextBox ratingsDataList;
         private Button storeRatingsDataBtn;
         private Button retrieveRatingsDataBtn;
         private TextBox searchBox2;
         private Button searchRatingsBtn;
+        private ListBox ratingsListBox;
     }
 }
